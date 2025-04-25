@@ -1,0 +1,229 @@
+.game-header {
+    --background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
+    --color: white;
+  }
+  
+  .game-title {
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .score-card {
+    flex: 1;
+    max-width: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .score-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .player-score {
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-primary);
+  }
+  
+  .computer-score {
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-secondary);
+  }
+  
+  .score-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: inherit;
+  }
+  
+  .game-area {
+    padding: 20px 0;
+  }
+  
+  .choice {
+    margin-bottom: 20px;
+  }
+  
+  .choice-title {
+    font-size: 1.2rem;
+    color: var(--ion-color-medium);
+    margin-bottom: 10px;
+  }
+  
+  .choice-display {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  
+  .choice-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .choice-image.thinking {
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+  }
+  
+  .animated {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .result-card {
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .result-card.win {
+    --background: rgba(46, 204, 113, 0.1);
+    --color: var(--ion-color-success);
+    border: 2px solid var(--ion-color-success);
+  }
+  
+  .result-card.lose {
+    --background: rgba(231, 76, 60, 0.1);
+    --color: var(--ion-color-danger);
+    border: 2px solid var(--ion-color-danger);
+  }
+  
+  .result-card.draw {
+    --background: rgba(149, 165, 166, 0.1);
+    --color: var(--ion-color-medium);
+    border: 2px solid var(--ion-color-medium);
+  }
+  
+  .result-text {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  
+  .choice-button {
+    --border-radius: 50px;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .choice-button:hover {
+    transform: translateY(-3px);
+    --box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .choice-button.rock {
+    --background: white;
+border: 4px solid rgb(0, 153, 255);
+border-radius: 50px;
+    --color:  rgb(0, 153, 255);
+  }
+  
+  .choice-button.paper {
+    --background: white;
+    border: 4px solid rgb(255, 38, 0);
+    border-radius: 50px;
+        --color:   rgb(255, 38, 0);
+  }
+  
+  .choice-button.scissors {
+    --background: white;
+    border: 4px solid  #FFE66D;
+    border-radius: 50px;
+    --color: #FFE66D;
+  }
+  
+  .button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .history-card {
+    margin-top: 30px;
+    border-radius: 15px;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--ion-color-light);
+  }
+  
+  .history-item.win {
+    background: rgba(46, 204, 113, 0.1);
+  }
+  
+  .history-item.lose {
+    background: rgba(231, 76, 60, 0.1);
+  }
+  
+  .history-item.draw {
+    background: rgba(149, 165, 166, 0.1);
+  }
+  
+  .result-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .history-item.win .result-badge {
+    background: var(--ion-color-success);
+    color: white;
+  }
+  
+  .history-item.lose .result-badge {
+    background: var(--ion-color-danger);
+    color: white;
+  }
+  
+  .history-item.draw .result-badge {
+    background: var(--ion-color-medium);
+    color: white;
+  }

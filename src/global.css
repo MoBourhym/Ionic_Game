@@ -1,0 +1,74 @@
+/* Custom global styles */
+:root {
+    --ion-color-primary: #FF6B6B;
+    --ion-color-primary-rgb: 255,107,107;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #e05e5e;
+    --ion-color-primary-tint: #ff7a7a;
+  
+    --ion-color-secondary: #4ECDC4;
+    --ion-color-secondary-rgb: 78,205,196;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0,0,0;
+    --ion-color-secondary-shade: #45b4ac;
+    --ion-color-secondary-tint: #60d2ca;
+  
+    --ion-color-tertiary: #FFE66D;
+    --ion-color-tertiary-rgb: 255,230,109;
+    --ion-color-tertiary-contrast: #000000;
+    --ion-color-tertiary-contrast-rgb: 0,0,0;
+    --ion-color-tertiary-shade: #e0ca60;
+    --ion-color-tertiary-tint: #ffe97c;
+  
+    --ion-color-success: #2ecc71;
+    --ion-color-danger: #e74c3c;
+    --ion-color-warning: #f39c12;
+    --ion-color-dark: #2c3e50;
+    --ion-color-medium: #95a5a6;
+    --ion-color-light: #ecf0f1;
+  }
+  
+  /* Background pattern */
+  ion-content {
+    --background: linear-gradient(135deg, #0266fc 0%, #ff44ef 100%);
+  }
+  
+  /* Custom animation classes */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+  }
+  
+  .bounce {
+    animation: bounce 0.5s infinite;
+  }
+  
+  .shake {
+    animation: shake 0.5s infinite;
+  }
+  
+  /* Custom button styles */
+  .custom-button {
+    --border-radius: 50px;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 8px 0;
+  }
+  
+  /* Custom card styles */
+  .custom-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: white;
+    margin: 16px 0;
+  }

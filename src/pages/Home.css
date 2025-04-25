@@ -1,0 +1,92 @@
+.logo-container {
+  margin: 40px auto 20px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.hands-preview {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.hand-preview {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.hand-preview.rock {
+  transform: rotate(-30deg);
+}
+
+.hand-preview.paper {
+  transform: rotate(0deg);
+}
+
+.hand-preview.scissors {
+  transform: rotate(30deg);
+}
+
+.hand-preview:hover {
+  transform: scale(1.2) rotate(0deg);
+}
+
+.start-button {
+  --background: linear-gradient(135deg, blue 0%, red 100%);
+  --background-hover: linear-gradient(135deg, var(--ion-color-primary-shade) 0%, var(--ion-color-secondary-shade) 100%);
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 40px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation for the start button */
+.start-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.start-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.1);
+  transform: rotate(30deg);
+  transition: all 0.3s;
+}
+
+.start-button:hover::after {
+  left: 100%;
+}
